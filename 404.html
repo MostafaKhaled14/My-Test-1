@@ -7,8 +7,15 @@
   </head>
   <body>
     <script>
-      window.location.href = "/My-Test-1/index.html?/";
-      window.location.replace("/My-Test-1/index.html?/", `/My-Test-1/${window.location.pathname}` );
+      var path = window.location.pathname.replace("/My-Test-1", "");
+
+      if (window.location.pathname !== "/My-Test-1" + path) {
+        if (path === "/index.html" || path === "") {
+          window.location.replace("/My-Test-1/");
+        } else {
+          window.location.replace("/My-Test-1" + path);
+        }
+      }
     </script>
   </body>
 </html>
