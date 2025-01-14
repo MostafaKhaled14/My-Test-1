@@ -8,7 +8,7 @@
   <body>
     <script>
       var path = window.location.pathname.replace("/My-Test-1", "");
-      window.location.replace("/My-Test-1/index.html" + path);
+      path === "/index.html" ? window.location.replace("/My-Test-1/") : window.location.replace("/My-Test-1" + path);
     </script>
   </body>
 </html>
